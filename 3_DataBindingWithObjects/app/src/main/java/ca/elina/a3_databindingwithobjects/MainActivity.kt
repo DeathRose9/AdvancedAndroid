@@ -66,6 +66,7 @@ class MainActivity : AppCompatActivity() {
 }
 
 //  So, this is how we directly pass an object to the layout and use it with data binding.
-//  1. At the top of the xml layout file, we declared an object reference variable using a variable tag, inside data tags.
-//  2. We used that object reference variable to get values for the views.
-//  3. In the main activity we wrote codes to pass the student object to the binding object of the layout.
+//  1. At the top of the xml layout file, we declared an object reference variable using a variable tag,
+//  inside data tags. (<data><variable>...</data>)
+//  2. We used that object reference variable to get values for the views. (android:text="@{student.email}")
+//  3. In the main activity we wrote codes to pass the student object to the binding object of the layout. (binding.student = getStudent())
