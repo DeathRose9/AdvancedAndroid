@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         // Step 11 - create the ViewModel
         viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
-        // Now, we can invoke functions of view model, using this view model instance.
+        // Now, we can invoke functions of ViewModel, using this viewModel instance.
 
         // Step 12 - invoke functions of ViewModel, using this viewModel
         binding.countText.text = viewModel.getCurrentCount().toString() // binding.countText.text = count.toString() -> previously
@@ -43,4 +43,4 @@ class MainActivity : AppCompatActivity() {
 // Now as a result of our newly created view model object storing data
 // while the view controller class destroying and re creating during the configuration change,
 // we get the actual click count value.
-// In previous example count started from 0 after rotation / configuration change
+// In previous example count started from 0 after rotation / configuration change.
