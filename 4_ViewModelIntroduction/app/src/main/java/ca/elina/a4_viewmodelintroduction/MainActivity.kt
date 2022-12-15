@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     // Step 4 - Declare reference variable for the binding object
     private lateinit var binding: ActivityMainBinding
 
-    // Step 6 - defined count variable to hold integer value
+    // Step 6 - define count variable to hold integer value
     private var count = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,7 +41,6 @@ class MainActivity : AppCompatActivity() {
 }
 
 // When we press on the “Click Here” Button, we can see that click count value appears on the text view.
-
 // NOTE ******
 // If we rotate this app, ew can see that click count value disappeared
 // If we press the button, count will again start from the beginning.
