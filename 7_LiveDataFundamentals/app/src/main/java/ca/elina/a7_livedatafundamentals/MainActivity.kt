@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
         // Here, we will write codes to observe the total value, which is now in MutableLiveData format.
         // Step 5 - delete ->  binding.resultTextView.text = viewModel.getTotal().toString() and write this...
-        viewModel.total.observe(this, Observer {
+        viewModel.totalData.observe(this, Observer {
             //  “it” represents int total value
             // Step 6 -  can write codes to show the total value in the text view.
             binding.resultTextView.text = it.toString()
@@ -59,5 +59,17 @@ class MainActivity : AppCompatActivity() {
 //            binding.resultTextView.text = viewModel.getTotal().toString()
         }
     }
-
 }
+// So, this is how we use live data objects to get live, up-to-date data form the view model.
+// So ...
+// 1. In the view model, we created a MutableLiveData object of type Int to hold the total value.
+// And we used value property and plus function to update its value.
+// 2. In the main activity, we wrote codes to observe the live data and show the total value on the text view.
+
+
+// But there is one problem. ***
+// Since this total variable is not marked private, we can directly access this total variable.
+// It is not a good coding practice.
+// We need to restrict direct access to these data and encapsulate them
+// Step 8 - is in MainActivityViewModel
+
