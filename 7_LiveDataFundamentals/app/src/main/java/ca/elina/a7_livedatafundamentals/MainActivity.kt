@@ -1,5 +1,4 @@
 package ca.elina.a7_livedatafundamentals
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -32,7 +31,6 @@ import ca.elina.a7_livedatafundamentals.databinding.ActivityMainBinding
 // Step 1 starts in  MainActivityViewModel
 class MainActivity : AppCompatActivity() {
     private lateinit var viewModelFactory: MainActivityViewModelFactory
-
     private lateinit var binding: ActivityMainBinding
     private lateinit var viewModel: MainActivityViewModel
 

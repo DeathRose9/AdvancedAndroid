@@ -5,8 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainActivityViewModel(startingTotal: Int) : ViewModel() {
-    // Step 1 -  change “total ” variable to a mutable live data of type int.
-//    private var total = 0
+    // Step 1 -  change “total ” variable to a mutable live data of type int and delete -> private var total = 0
     // since we are going observe this from the main activity, we need to remove the private modifier.
 //    var total = MutableLiveData<Int>()
 
@@ -28,7 +27,6 @@ class MainActivityViewModel(startingTotal: Int) : ViewModel() {
         total.value = startingTotal
     }
 
-
     //  We don’t need this getTotal function. We are going to observe the variable from the activity.
     // Step 3 - remove -> fun getTotal(): Int { return total }
 
@@ -38,10 +36,9 @@ class MainActivityViewModel(startingTotal: Int) : ViewModel() {
         total.value = (total.value)?.plus(input)
     }
 }
-
 // What is MutableLiveData?
 // What is the difference between MutableLiveData and LiveData?
 // Data in a LiveData object are only readable. We cannot update those data.
 // MutableLive data class is a subclass of LiveData class.
 // A Mutable LiveData object allows us to change its data.
-// As we need to always update the value of the total, so here it has to Be MutableLiveData.
+// As we need to always update the value of the total, so here it has to be MutableLiveData.
