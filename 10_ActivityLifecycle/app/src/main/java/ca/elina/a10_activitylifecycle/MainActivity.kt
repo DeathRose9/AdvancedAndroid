@@ -54,7 +54,9 @@ class MainActivity : AppCompatActivity() {
     // We don't have to override them unless we need to use them.
     override fun onCreate(savedInstanceState: Bundle?) {
         // When we create an activity, we extend AppCompact activity class.
-        // If we check the class hierarchy of it, AppCompact activity class extents, FragmentActivity, FragmentActivity extents ComponentActivity,  ComponentActivity extends the original Activity class, which has original lifecycle callback functions.
+        // If we check the class hierarchy of it, AppCompact activity class extents, FragmentActivity,
+        // FragmentActivity extents ComponentActivity,  ComponentActivity extends the original Activity class,
+        // which has original lifecycle callback functions.
         // All the activities we create automatically extend these classes.
         // Read more here..
         // https://developer.android.com/reference/androidx/appcompat/app/AppCompatActivity
@@ -70,7 +72,8 @@ class MainActivity : AppCompatActivity() {
         // Then, during the resumed state, app comes to the foreground.
         // This is the state, in which the activity interacts with the user.
         // Now, we can call activity is running.
-        // When that happen, onResumed() function will be called. Activity stays in the resumed state until something happens to take focus away from it.
+        // When that happen, onResumed() function will be called. Activity stays in the resumed state until
+        // something happens to take focus away from it.
         // What are the events that can happen to take the focus away from a running activity?
         // User Navigating to another activity.
         // User receiving a phone call.
@@ -78,17 +81,21 @@ class MainActivity : AppCompatActivity() {
         // Or a screen rotation.
         // In those cases Activity will transit to paused state, and onPaused() function will be invoked.
         //If the activity returns to the resumed state from the paused state, the system once again calls onResumed() method.
-        //So, if our app required something to initialize every time activity resumed, we should override the onResumed() function and add that code part there.
+        //So, if our app required something to initialize every time activity resumed, we should
+        // override the onResumed() function and add that code part there.
 
-        //We may write codes inside onResumed() overridden function for tasks, like reconnecting with the server to load media files or to initialize the camera.
+        //We may write codes inside onResumed() overridden function for tasks, like reconnecting with the
+        // server to load media files or to initialize the camera.
         //The system calls the onPaused() function and takes the activity to paused state
         //As soon as the user is leaving. Activity app is moving from foreground to the background.
 
-        //We should use the unPaused() overridden function to pause or adjust operations that should not continue while the activity is in the paused state.
+        //We should use the unPaused() overridden function to pause or adjust operations that should not continue
+        // while the activity is in the paused state.
         //After the paused state, If the app is not moving to the resumed state, system may transit activity to the stopped state.
         //When that happen, Activity instance will be still there, in the memory, but UI will be destroyed.
 
-        //If the user navigates back to an activity in a stopped state, system will have to invoke onReStart() and onStart() functions to create the user interface again.
+        //If the user navigates back to an activity in a stopped state, system will have to invoke onReStart() and
+        // onStart() functions to create the user interface again.
 
         //This onDestroy() function is called, when the system destroys the activity.
         //This can happen when we programmatically invoke the finish() function to intentionally destroy the activity.
