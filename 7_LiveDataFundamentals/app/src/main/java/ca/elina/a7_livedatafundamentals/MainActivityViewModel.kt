@@ -33,7 +33,7 @@ class MainActivityViewModel(startingTotal: Int) : ViewModel() {
     // Inside this setTotal function, we need to write codes to add the input number to current total.
     fun setTotal(input: Int) {
         // Step 4 change   total += input into ...
-        total.value = (total.value)?.plus(input)
+        total.value = (total.value)?.plus(input) // null safety check (?)
     }
 }
 // What is MutableLiveData?
