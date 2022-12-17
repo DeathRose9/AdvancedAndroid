@@ -26,6 +26,14 @@ class HomeFragment : Fragment() {
         // Step 17.2 - construct data binding object
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_home, container, false)
 
+        // Step 26 -
+        // use nav controller object to navigate to the second fragment
+        binding.button.setOnClickListener {
+            // Here view is represented by 'it'
+            // pass the action id to navigate function as an argument
+            it.findNavController().navigate(R.id.action_homeFragment_to_secondFragment)
+        }
+
         // Step 17.3 - construct data binding object
         return binding.root
     }

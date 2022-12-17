@@ -23,6 +23,9 @@ class SecondFragment : Fragment() {
         // Step 24.2 - construct data binding object
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_second, container, false)
 
+//        var input = arguments!!.getString("user_input")
+//        binding.textView.text = input.toString()
+
         // Step 24.3 - construct data binding object
         return binding.root
     }

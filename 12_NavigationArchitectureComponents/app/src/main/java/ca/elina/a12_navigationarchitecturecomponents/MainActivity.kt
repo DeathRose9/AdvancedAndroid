@@ -85,3 +85,13 @@ class MainActivity : AppCompatActivity() {
 // Step 22 - add TextView(remove text from it) and set constraints
 // Step 23 - since we are going to use data binding, add <layout> outermost tags
 // Step 24 - open the SecondFragment.kt file and add codes to use data binding there
+
+// Step 25 - add an action from HomeFragment to SecondFragment
+// - go to nav_graph.xml
+// - hover the mouse pointer over the vertical center of the right-hand edge of the HomeFragment
+// - click within the circle and drag the resulting line to the SecondFragment and release
+// Note ********
+// We just created an action. Android studio has already given it an id as action_homeFragment_to_secondFragment
+// You can change the id if you wish
+
+// Step 26 - go to go to the HomeFragment.kt and implement clickListener for the button
