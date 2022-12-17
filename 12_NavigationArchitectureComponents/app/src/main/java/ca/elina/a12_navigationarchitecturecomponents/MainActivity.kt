@@ -18,6 +18,7 @@ import ca.elina.a12_navigationarchitecturecomponents.databinding.ActivityMainBin
 //         def nav_version = "2.1.0"
 //        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
 
+// Step #3 was causing errors, so eventually I commented it out and app worked without it perfectly
 // Step 3 - add plugin before android{} in build.gradle (App) -> apply plugin: "androidx.navigation.safeargs.kotlin"
 
 // Step 5 - add data binding in build.gradle (App)
