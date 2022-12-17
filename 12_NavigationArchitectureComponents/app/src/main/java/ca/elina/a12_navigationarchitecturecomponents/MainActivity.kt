@@ -51,3 +51,37 @@ class MainActivity : AppCompatActivity() {
 // The name is androidx.navigation.fragment.NavHostFragment.
 // Value of the defaultNavHost property has set to true
 // Path of the navigation graph xml resource file has set as the value of the navGraph property
+
+// Step 11 - Create Navigation Destinations
+// Different fragments in the navigation graph are called navigation destinations
+// - click on add destination in nav_graph.xml
+// - click add new destination
+// - name as HomeFragment
+// - do not include(uncheck them if they are checked) fragment factory methods or interface callback
+// - click on FINISH
+// Since we do not have other fragments, this fragment is marked as start destination (home icon).
+// When we have more than one fragments, we will be able to easily change the start
+// destination by clicking on home in toolbar after selecting the relevant fragment.
+
+// Step 12 - open HomeFragment by double clicking on it
+// Step 13 - delete the TextView
+// Step 14 - convert FrameLayout to ConstraintLayout
+// Step 15 - add EditText(remove text from it), add Button(text as Submit) and set constraints
+// Step 16 - since we are going to use data binding, add <layout> outermost tags
+// Step 17 - open the HomeFragment.kt file and add codes to use data binding there
+
+// Step 18 - add new Destination
+// - go to nav_graph.xml
+// - click on New Destination icon
+// - click on Create New Destination
+// - name as SecondFragment
+// - do not include(uncheck them if they are checked) fragment factory methods or interface callback
+// - click on FINISH
+// Now we have two destinations
+
+// Step 19 - double click on SecondFragment to open xml file
+// Step 20 - delete the TextView
+// Step 21 - convert FrameLayout to ConstraintLayout
+// Step 22 - add TextView(remove text from it) and set constraints
+// Step 23 - since we are going to use data binding, add <layout> outermost tags
+// Step 24 - open the SecondFragment.kt file and add codes to use data binding there
