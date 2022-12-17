@@ -21,10 +21,15 @@ class SecondFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         // Step 24.2 - construct data binding object
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_second, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_second, container, false)
 
-//        var input = arguments!!.getString("user_input")
-//        binding.textView.text = input.toString()
+        // Step 28.1
+        // We added the bundle as an argument. Here we will get it from the arguments.
+        var input = arguments?.getString("user_input")
+
+        // Step 28.2
+        // display this user_input value on the text view
+        binding.textView.text = input.toString()
 
         // Step 24.3 - construct data binding object
         return binding.root

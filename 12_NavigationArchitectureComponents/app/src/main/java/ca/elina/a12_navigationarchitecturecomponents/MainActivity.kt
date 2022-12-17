@@ -95,3 +95,5 @@ class MainActivity : AppCompatActivity() {
 // You can change the id if you wish
 
 // Step 26 - go to go to the HomeFragment.kt and implement clickListener for the button
+
+// Step 27 - Transform data between destinations (continue in HomeFragment.kt)
